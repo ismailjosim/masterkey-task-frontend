@@ -6,7 +6,7 @@ import Header from './Header';
 const Main = () => {
     return (
         <div className='grid grid-cols-5 gap-5'>
-            <div className='col-span-1'>
+            <div className='col-span-1 sticky'>
                 <Header />
             </div>
             <div className='col-span-4'>

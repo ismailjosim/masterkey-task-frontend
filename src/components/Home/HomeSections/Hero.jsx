@@ -4,17 +4,18 @@ import productImg from '../../../assets/homeproduct.png'
 import star from '../../../assets/star.png'
 import { BsPlusLg } from 'react-icons/bs';
 import { AiFillHeart } from 'react-icons/ai';
+import cardBg from '../../../assets/Frame 22.png'
 
 const Hero = () => {
     return (
-        <section className='grid grid-cols-3 gap-5'>
+        <section className='grid grid-cols-3 gap-5 mr-10'>
             <div className="relative col-span-2 py-8 shadow-lg mx-auto">
                 <div className="grid items-start grid-cols-1 gap-8 md:grid-cols-2">
                     <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
                         <img
                             alt="Les Paul"
                             src={ productImg }
-                            className="object-cover w-full aspect-square rounded-xl"
+                            className="object-cover aspect-square rounded-xl"
                         />
                     </div>
                     <div>
@@ -91,7 +92,18 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-span-1'></div>
+            <div className='col-span-1'>
+                <div className="card w-full opacity-100 bg-base-100 shadow-xl image-full">
+                    <figure><img
+                        src={ cardBg } alt="" /></figure>
+                    <div className="card-body">
+                        <p className='text-2xl font-semibold capitalize'>Summer headphones from top brands</p>
+                        <div className="card-actions justify-start">
+                            <button className="text-white">Buy It Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     );
