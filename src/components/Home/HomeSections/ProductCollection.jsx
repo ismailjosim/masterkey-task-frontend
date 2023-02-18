@@ -49,7 +49,7 @@ const ProductCollection = () => {
                 </div>
                 { products.slice(0, 4).map((product, idx) => {
                     return (
-                        <div key={ idx } className='flex items-center justify-between mb-2'>
+                        <div key={ idx } className='flex items-start justify-between mb-2'>
                             <div>
                                 <img width={ 50 } src={ product?.picture } alt="" />
                             </div>
@@ -57,7 +57,7 @@ const ProductCollection = () => {
                                 <h4>{ product.name }</h4>
                                 <span className='text-xs'>{ product.ratting } reviews and { product.order } orders</span>
                             </div>
-                            <div>price ${ product.price }</div>
+                            <div className='text-sm'>price ${ product.price }</div>
                         </div>
                     )
                 })
