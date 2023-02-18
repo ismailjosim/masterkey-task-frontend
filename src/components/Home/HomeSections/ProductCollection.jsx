@@ -47,7 +47,7 @@ const ProductCollection = () => {
                     <h3 className='text-xl font-semibold'>Daily Deals</h3>
                     <p>view All</p>
                 </div>
-                { products.map((product, idx) => {
+                { products.slice(0, 4).map((product, idx) => {
                     return (
                         <div key={ idx } className='flex items-center justify-between mb-2'>
                             <div>
