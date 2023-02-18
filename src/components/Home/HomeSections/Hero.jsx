@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BiMinus } from 'react-icons/bi';
 import productImg from '../../../assets/homeproduct.png'
 import star from '../../../assets/star.png'
@@ -6,17 +6,6 @@ import { BsPlusLg } from 'react-icons/bs';
 import { AiFillHeart } from 'react-icons/ai';
 
 const Hero = () => {
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data.products))
-    }, [])
-
-
-
-
     return (
         <section className='grid grid-cols-3 gap-5'>
             <div className="relative col-span-2 py-8 shadow-lg mx-auto">
@@ -30,7 +19,7 @@ const Hero = () => {
                     </div>
                     <div>
                         <div className="flex justify-between">
-                            <div className='mr-2'>
+                            <div className='mr-2 '>
                                 <h1 className="text-xl font-semibold">
                                     Beats Studio3 Wireless Headphone
                                 </h1>
