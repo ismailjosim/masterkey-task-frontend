@@ -4,20 +4,21 @@ import Error from '../layouts/Error';
 import Main from '../layouts/Main';
 
 
-const routes = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main />,
-        errorElement: <Error />,
-        children: [
-            {
-                path: '/',
-                element: <Home></Home>
-            }
-        ]
-
-
-    }
-])
+const routes = createBrowserRouter(
+    [
+        {
+            path: '/',
+            element: <Main />,
+            errorElement: <Error />,
+            children:
+                [
+                    {
+                        path: '/',
+                        element: <Home />
+                    }
+                ]
+        }
+    ]
+)
 
 export default routes;
